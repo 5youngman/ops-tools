@@ -1,0 +1,5 @@
+#功能代码:类别:hh3c h3c Huawei:command.cfg中定义的检查命令:功能描述
+SNMP_CPUUSAGE:MIB:HH3C-ENTITY-EXT-MIB H3C-ENTITY-EXT-MIB HUAWEI-LSW-DEV-ADM-MIB:check_switch_cpu:CPU Usage
+SNMP_CPUUSAGE:OID:hh3cEntityExtCpuUsage h3cEntityExtCpuUsage hwLswSysCpuRatio:check_switch_cpu:CPU Usage
+SNMP_MEMUSAGE:MIB:HH3C-ENTITY-EXT-MIB H3C-ENTITY-EXT-MIB HUAWEI-LSW-DEV-ADM-MIB:check_switch_men:Memory Usage
+SNMP_MEMUSAGE:OID:hh3cEntityExtMemUsage h3cEntityExtMemUsage hwLswSysMemoryRatio:check_switch_men:Memory Usage

@@ -1,0 +1,49 @@
+
+# Define the switch that we'll be monitoring
+
+define host{
+	use		generic-switch
+	host_name	Host_my-Switch
+	address		Addr_my-Switch
+	}
+
+
+# Create a service to PING to switch
+
+define service{
+	use			generic-service	
+	host_name		Host_my-Switch
+	service_description	PING
+	check_command		check_ping!200.0,20%!600.0,60%
+	normal_check_interval	5	
+	retry_check_interval	1		
+	}
+
+
+# Monitor uptime via SNMP
+
+define service{
+	use			generic-service	
+	host_name		Host_my-Switch
+	service_description	Uptime	
+	check_command		check_snmp!-o sysUpTime.0
+	}
+
+
+# Accept switch TRAP alert
+define service{
+        use			SNMP-TRAP
+        hosts 			Host_my-Switch
+	service_description	SNMP-TRAP
+	}
+
+
+# Monitor cpu usage via SNMP
+
+define service{
+        use                     generic-service
+        host_name               Host_my-Switch
+        service_description     CPU Usage
+        check_command           check_switch_cpu!-o SNMP_CPUUSAGE !60!80
+        }
+
