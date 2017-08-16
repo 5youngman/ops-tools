@@ -5,7 +5,7 @@ import time
 import os
 import sys 
 from datetime import datetime,date
-
+#批量下载中国健康报PDF文件
 # usage: download_jkb.py year mouth day
 # sample : download_jkb.py 2015 09 28
 # http://szb.jkb.com.cn/jkbpaper/images/1/2015-09/28/01/2015092801_pdf.pdf
