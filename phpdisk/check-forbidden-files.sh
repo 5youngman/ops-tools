@@ -4,8 +4,7 @@
 # check-forbidden-files.sh - 一个检查用户上传文件格式的小脚本。每天5分钟
 #执行一次。用于防止用户通过修改后缀名的形式上传非法文件。
 #
-# 作者: 刘西洋 66954
-#              <locke@honliv.com> <xiyangliu1987@gmail.com>
+#              <xiyangliu1987@gmail.com>
 #              http://www.xiyang-liu.com
 #
 # 软件自由，版权没有
